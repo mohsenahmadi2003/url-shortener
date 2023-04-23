@@ -13,9 +13,6 @@ class CreateShortUrl(CreateAPIView):
 
 
 class ListShortUrl(ListAPIView):
-
-    # user = User.objects.filter()
-    # queryset = UrlShortener.objects.filter(creator=)
     serializer_class = UrlShortenerSerializers
     permission_classes = [IsLogin]
 

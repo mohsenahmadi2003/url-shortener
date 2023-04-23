@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import UrlShortener
-from django.contrib.auth.models import User
 
 
 class UrlShortenerSerializers(serializers.ModelSerializer):
