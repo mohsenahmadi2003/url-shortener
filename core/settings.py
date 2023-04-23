@@ -69,6 +69,12 @@ TEMPLATES = [
     },
 ]
 
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+#         ]
+#     }
+
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
@@ -101,6 +107,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'api.permissions.IsLogin'
+    ]
+
+}
+
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
@@ -123,3 +138,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# local host
+HOST_URL = "http://127.0.0.1:8000"
